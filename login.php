@@ -12,7 +12,7 @@
     </head>
     <body class="bg-primary">
         <div id="layoutAuthentication">
-            <div id="layoutAuthentication_content">
+            <div id="layoutAuthentication_content" style='background-color:#212529 !important'>
                 <main>
                     <div class="container">
                         <div class="row justify-content-center">

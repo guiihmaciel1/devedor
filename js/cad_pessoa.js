@@ -96,3 +96,16 @@ function editar()
 
     }  
 }
+
+
+function excluir()
+{
+   with(retorno)
+   {
+      if (confirm("Confirma a exclusão?")) {
+         opc.value = '5'; submit(); 
+       } else {
+         return;
+       }
+   }
+}

@@ -44,7 +44,7 @@
                                     
                                     <tbody>
                                         <?php 
-                                        $query='select * from pessoa order by id_pessoa desc';
+                                        $query='select * from pessoa where status != 0  order by id_pessoa desc';
                                         $con       = pdo_open();
                                         $result    = query($query);
                                         while ($row = $result->fetchObject())
@@ -127,8 +127,8 @@
                     $cpfcnpj = trim($_POST['cpfcnpj']);
                     $dtnasc = $_POST['dtnasc'];
                     $endereco = strtoupper(trim($_POST['endereco'])); 
-                    $query       = "insert into pessoa (nome, cpfcnpj,  dtnasc, endereco) values
-                    ('$nome', $cpfcnpj, '$dtnasc', '$endereco');";
+                    $query       = "insert into pessoa (nome, cpfcnpj,  dtnasc, endereco,status) values
+                    ('$nome', $cpfcnpj, '$dtnasc', '$endereco',1);";
                     $con         = pdo_open();
                     $con->query($query);                    
                     $con = null;
@@ -188,7 +188,14 @@
                             </div>
                             </div>
                             </div>
-                            <a class="btn btn-success" onclick='editar();'>Salvar edição</a>
+                            <div class="row"> 
+                            <div class="col-md-1"> 
+                                <a class="btn btn-success" onclick='editar();'>Salvar</a>
+                            </div>&nbsp;&nbsp;
+                            <div class="col-md-1"> 
+                                <a class="btn btn-danger" onclick='excluir();'>Excluir</a>
+                            </div>
+                            </div>
                         </form>
                         </div>
                     </div>
@@ -204,6 +211,15 @@
                 $dtnasc = $_POST['dtnasc'];
                 $endereco = strtoupper(trim($_POST['endereco'])); 
                 $query       = "update pessoa set nome = '$nome', cpfcnpj = '$cpfcnpj', dtnasc = '$dtnasc', endereco = '$endereco' where id_pessoa = $id_pessoa;";
+                $con         = pdo_open();
+                #echo $query;
+                $con->query($query);                    
+                $con = null;
+                header("Location: cad_pessoa.php");
+            }else if ($opc == 5)
+            {
+                $id_pessoa = $_POST['id_pessoa'];                
+                $query       = "update pessoa set status = 0 where id_pessoa = $id_pessoa;";
                 $con         = pdo_open();
                 #echo $query;
                 $con->query($query);                    
