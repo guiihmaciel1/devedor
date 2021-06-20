@@ -62,11 +62,7 @@ ini_set(‘display_startup_erros’, 0);
                             <a class='nav-link' href='cad_devedor.php'>Devedores</a>                            
                         </nav>
                     </div>
-                    <div class='sb-sidenav-menu-heading'>Relatórios</div>
-                    <a class='nav-link' href='charts.html'>
-                        <div class='sb-nav-link-icon'><i class='fas fa-chart-area'></i></div>
-                        Geral
-                    </a>
+                    
                     
                 </div>
             </div>
