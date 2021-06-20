@@ -19,6 +19,7 @@ ini_set(‘display_startup_erros’, 0);
         <link href='https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css' rel='stylesheet' />
         <link href='css/styles.css' rel='stylesheet' />
         <script src='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js' crossorigin='anonymous'></script>
+        <link href='https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css' rel='stylesheet' />
     </head>
     <nav class='sb-topnav navbar navbar-expand navbar-dark bg-dark'>
     <!-- Navbar Brand-->
@@ -58,18 +59,15 @@ ini_set(‘display_startup_erros’, 0);
                         <nav class='sb-sidenav-menu-nested nav'>
                             <a class='nav-link' href='cad_pessoa.php'>Pessoas</a>
                             <a class='nav-link' href='cad_divida.php'>Dívidas</a>
-                            <a class='nav-link' href='layout-sidenav-light.html'>Devedores</a>                            
+                            <a class='nav-link' href='cad_devedor.php'>Devedores</a>                            
                         </nav>
                     </div>
                     <div class='sb-sidenav-menu-heading'>Relatórios</div>
                     <a class='nav-link' href='charts.html'>
                         <div class='sb-nav-link-icon'><i class='fas fa-chart-area'></i></div>
-                        Charts
+                        Geral
                     </a>
-                    <a class='nav-link' href='tables.html'>
-                        <div class='sb-nav-link-icon'><i class='fas fa-table'></i></div>
-                        Tables
-                    </a>
+                    
                 </div>
             </div>
         </nav>
@@ -109,6 +107,24 @@ function say_footer_cad_divida(){
     <script src='https://cdn.jsdelivr.net/npm/simple-datatables@latest' crossorigin='anonymous'></script>
     <script src='js/datatables-simple-demo.js'></script>
     <script src='js/cad_divida.js'></script>
+    ";
+
+}
+function say_footer_cad_devedor(){
+
+    echo"<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js' crossorigin='anonymous'></script>
+    <script src='js/scripts.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/simple-datatables@latest' crossorigin='anonymous'></script>
+    <script src='js/datatables-simple-demo.js'></script>
+    <script src='js/cad_devedor.js'></script>    
+    
+    
+
+    
+    
+
+
+    
     ";
 
 }
