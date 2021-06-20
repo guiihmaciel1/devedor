@@ -2,9 +2,13 @@
 
 function say_header(){
 require 'dist/conexao.php';
+ini_set('display_errors', 0);
+ini_set('display_startup_erros', 0);
     echo"
     <!DOCTYPE html>
     <html lang='pt-br'>
+    ini_set(‘display_errors’, 0);
+ini_set(‘display_startup_erros’, 0);
     <head>
         <meta charset='utf-8' />
         <meta http-equiv='X-UA-Compatible' content='IE=edge' />
@@ -93,6 +97,7 @@ function say_footer_cad(){
     <script src='js/scripts.js'></script>
     <script src='https://cdn.jsdelivr.net/npm/simple-datatables@latest' crossorigin='anonymous'></script>
     <script src='js/datatables-simple-demo.js'></script>
+    <script src='js/cad_pessoa.js'></script>
     ";
 
 }
