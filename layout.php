@@ -57,8 +57,8 @@ ini_set(‘display_startup_erros’, 0);
                     <div class='collapse' id='collapseLayouts' aria-labelledby='headingOne' data-bs-parent='#sidenavAccordion'>
                         <nav class='sb-sidenav-menu-nested nav'>
                             <a class='nav-link' href='cad_pessoa.php'>Pessoas</a>
-                            <a class='nav-link' href='layout-sidenav-light.html'>Devedores</a>
-                            <a class='nav-link' href='layout-sidenav-light.html'>Dívidas</a>
+                            <a class='nav-link' href='cad_divida.php'>Dívidas</a>
+                            <a class='nav-link' href='layout-sidenav-light.html'>Devedores</a>                            
                         </nav>
                     </div>
                     <div class='sb-sidenav-menu-heading'>Relatórios</div>
@@ -91,13 +91,24 @@ function say_footer_dash(){
     ";
 
 }
-function say_footer_cad(){
+function say_footer_cad_pessoa(){
 
     echo"<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js' crossorigin='anonymous'></script>
     <script src='js/scripts.js'></script>
     <script src='https://cdn.jsdelivr.net/npm/simple-datatables@latest' crossorigin='anonymous'></script>
     <script src='js/datatables-simple-demo.js'></script>
     <script src='js/cad_pessoa.js'></script>
+    <script src='js/cad_divida.js'></script>
+    ";
+
+}
+function say_footer_cad_divida(){
+
+    echo"<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js' crossorigin='anonymous'></script>
+    <script src='js/scripts.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/simple-datatables@latest' crossorigin='anonymous'></script>
+    <script src='js/datatables-simple-demo.js'></script>
+    <script src='js/cad_divida.js'></script>
     ";
 
 }
